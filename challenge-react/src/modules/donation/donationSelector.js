@@ -17,6 +17,11 @@ export const donationActiveCurrencySelector = createSelector(
     data => data.activeCurrency
 ) 
 
+export const donationSuccessMessageSelector = createSelector(
+    donationDataSelector,
+    data => data.successMessage
+)
+
 export const donationErrorMessageSelector = createSelector(
     donationDataSelector,
     data => data.errorMessage

@@ -10,12 +10,21 @@ import useCharity from '~hooks/useCharity'
 
 function Home() {
     const { charities, fetchCharities, status } = useCharity()
-    const { errorMessage, submittingPayment, submitPayment, fetchPayment } = useDonation()
+    const {
+        successMessage, errorMessage, submittingPayment,
+        submitPayment, fetchPayment,
+    } = useDonation()
 
     useEffect(() => {
         fetchCharities()
         fetchPayment()
     }, [])
+
+    useEffect(() => {
+        if (successMessage) {
+            cogoToast.success(successMessage)
+        }
+    }, [successMessage])
 
     useEffect(() => {
         if (errorMessage) {

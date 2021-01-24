@@ -11,6 +11,7 @@ const donationSlice = createSlice({
         data: {
             activeCurrency: CHARITY.activeCurrency,
             totalAmount: {},
+            successMessage: null,
             errorMessage: null,
         },
         status: 'idle',
@@ -22,9 +23,11 @@ const donationSlice = createSlice({
             })
             .addCase(submitPayment.fulfilled, (state, action) => {
                 state.data.amount = state.data.amount + action.payload
+                state.data.successMessage = 'Submit payment is success'
             })
             .addMatcher(isPendingAction(MODULE_NAME.donation), (state) => {
                 state.status = 'loading'
+                state.data.successMessage = null
                 state.data.errorMessage = null
             })
             .addMatcher(isFulFilledAction(MODULE_NAME.donation), (state) => {
