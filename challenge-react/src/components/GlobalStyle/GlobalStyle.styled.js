@@ -28,7 +28,7 @@ export default createGlobalStyle(({theme}) => `
         text-decoration: none;
     }
 
-    .ct-toast {
+    #ct-container .ct-toast {
         color: ${theme.colors.textColor};
         background-color:  ${theme.colors.foregroundColor};
     }
