@@ -1,11 +1,13 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
+import loadable from '@loadable/component'
 
-import Home from '~containers/Home'
-import NoMatch from '~containers/NoMatch'
 import Layout from '~components/Layout'
 import useTheme from '~hooks/useTheme'
+
+const Home = loadable(() => import('~containers/Home'))
+const NoMatch = loadable(() => import('~containers/NoMatch'))
 
 function App() {
     const theme = useTheme()

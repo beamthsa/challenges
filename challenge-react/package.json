@@ -14,6 +14,7 @@
     "lint": "eslint . --ext .js"
   },
   "dependencies": {
+    "@loadable/component": "5.14.1",
     "@reduxjs/toolkit": "1.5.0",
     "@styled-icons/material": "10.26.0",
     "axios": "0.21.1",
