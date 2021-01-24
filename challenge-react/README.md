@@ -6,6 +6,15 @@
 
 **Tamboon React** is a code challenge for frontend developer.
 
+## Getting Started
+
+```
+# yarn install or npm install
+# yarn start or npm start
+```
+You can now use your browser and point to http://localhost:3000
+
+
 ## Scenario
 
 Once upon a time.. nope!  
