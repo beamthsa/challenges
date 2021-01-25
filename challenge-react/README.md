@@ -7,8 +7,6 @@
 **Tamboon React** is a code challenge for frontend developer.
 
 ## Getting Started
-
-### yarn
 ```
 # yarn
 yarn install
